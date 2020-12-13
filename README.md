@@ -1,4 +1,4 @@
-# gopack
+# gopack  [![Build Status](https://travis-ci.com/ggdream/gopack.svg?branch=main)](https://travis-ci.com/ggdream/gopack)
 
 1. [项目文档](#项目文档)
 2. [更新说明](docs/update.md)
