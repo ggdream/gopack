@@ -46,6 +46,7 @@ Label:
 	if err := os.MkdirAll(filePath, os.ModePerm); err != nil {
 		return err
 	}
+
 	if err := caller.CallCmd("go", "mod", "init", repository); err != nil {
 		return err
 	}

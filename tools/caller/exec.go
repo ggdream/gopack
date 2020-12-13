@@ -5,10 +5,15 @@ import (
 	"bytes"
 	"fmt"
 	"os/exec"
+	"strings"
 )
 
 func CallCmd(name string, args ...string) error {
 	cmd := exec.Command(name, args...)
+	if len(args) > 2 && args[1] == "init" {
+		sl := strings.Split(args[2], "/")
+		cmd.Dir = sl[len(sl)-1]
+	}
 
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
