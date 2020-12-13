@@ -3,6 +3,7 @@ package new
 import (
 	"fmt"
 	Init "github.com/ggdream/gopack/cmd/init"
+	"github.com/ggdream/gopack/tools/caller"
 	"os"
 	"path"
 	"strings"
@@ -43,6 +44,9 @@ func Create(_type, _path, module string, name, version, author, description, rep
 	// create it!
 Label:
 	if err := os.MkdirAll(filePath, os.ModePerm); err != nil {
+		return err
+	}
+	if err := caller.CallCmd("go", "mod", "init", repository); err != nil {
 		return err
 	}
 	return Init.Generate(_type, filePath, name, version, author, description, repository)
