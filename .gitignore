@@ -16,6 +16,7 @@ gopack
 # vendor/
 .idea/
 .vscode/
+dist/
 
 *.yaml
 *.json

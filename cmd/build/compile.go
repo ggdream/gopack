@@ -1,7 +1,6 @@
 package build
 
 import (
-	"errors"
 	"fmt"
 	Init "github.com/ggdream/gopack/cmd/init"
 	"github.com/ggdream/gopack/global"
@@ -85,8 +84,8 @@ func Build(target, name string) error {
 			}
 		}(),
 	)
-	if msg, err := caller.CallCmdOut("go", "build", "-o", _path); err != nil {
-		return errors.New(msg)
+	if _, err := caller.CallCmdOut("go", "build", "-o", _path); err != nil {
+		return err
 	}
 
 	return nil
