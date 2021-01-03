@@ -15,6 +15,7 @@ func handlePack(c *cli.Context) error {
 	return pack.Packs(t, "")
 }
 
+// CommPack ...
 func CommPack() *cli.Command {
 
 	return &cli.Command{

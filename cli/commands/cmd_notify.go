@@ -10,6 +10,7 @@ func handleNotify(c *cli.Context) error {
 	return nil
 }
 
+// CommNotify ...
 func CommNotify() *cli.Command {
 
 	return &cli.Command{

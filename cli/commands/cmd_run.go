@@ -19,6 +19,7 @@ func handleRun(c *cli.Context) error {
 	return run.Runner(t, "", c.Args().Get(0))
 }
 
+// CommRun ...
 func CommRun() *cli.Command {
 
 	return &cli.Command{

@@ -15,6 +15,7 @@ func handleTidy(c *cli.Context) error {
 	return tidy.Tidy(t, "")
 }
 
+// CommTidy ...
 func CommTidy() *cli.Command {
 
 	return &cli.Command{

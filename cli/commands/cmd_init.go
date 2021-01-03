@@ -11,6 +11,7 @@ import (
 )
 
 var (
+	// FlagType ...
 	FlagType = &cli.StringFlag{
 		Name:        "type",
 		Aliases:     []string{"t"},
@@ -32,6 +33,7 @@ func handleInit(c *cli.Context) error {
 		name, global.DefaultDesc, fmt.Sprintf("github.com/%s/%s", name, dic))
 }
 
+// CommInit ...
 func CommInit() *cli.Command {
 
 	return &cli.Command{

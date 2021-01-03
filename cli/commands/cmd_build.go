@@ -15,6 +15,7 @@ func handleBuild(c *cli.Context) error {
 	return build.Builds(t, "")
 }
 
+// CommBuild ...
 func CommBuild() *cli.Command {
 
 	return &cli.Command{
