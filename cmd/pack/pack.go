@@ -77,7 +77,7 @@ func Pack(target, name, version string) error {
 			}
 		}(),
 	)
-	if msg, err := caller.CallCmdOut("go", "build", "-o", execPath); err != nil {
+	if msg, err := caller.CallCmdOut("go", "build", "-ldflags", "-s -w", "-o", execPath); err != nil {
 		fmt.Printf("target: %s | err: %s\n", target, msg)
 		return err
 	}
